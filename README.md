@@ -1,9 +1,9 @@
 # RVACF DB
 
 ## Setup
-### Arch Linux
+## Arch Linux
 
-**Installation**
+### Installation
 
 1. Install PostGreSQL from official repo:
 ```
@@ -14,7 +14,7 @@ sudo pacman -S postgresql
 postgre --version
 ```
 
-**Configuration**
+### Configuration
 
 1. Switch to Postgres user:
 ```
@@ -41,7 +41,7 @@ psql --tuples-only -c "SHOW data_checksums"
 pg_ctl -D /var/lib/postgres/data -l logfile start
 ```
 
-**Enable PostgreSQL Server**
+### Enable PostgreSQL Server
 
 1. Start the PostgreSQL server:
 ```
@@ -60,7 +60,7 @@ systemctl enable postgresql
 systemctl stop postgresql
 ```
 
-**Creating a new user in PostgreSQL Server**
+### Creating a new user in PostgreSQL Server
 
 1. Switch to Postgres default user to directly run SQL commands:
 ```
@@ -82,4 +82,3 @@ GRANT ALL PRIVILEGES ON DATABASE db_name TO
 username;
 ```
 5. To check if database and user was created successfully, run ```\l``` to list all databases and ```\du``` to list all users
-
